@@ -1,0 +1,15 @@
+# Importieren der benötigten Klassen aus der PIL-Bibliothek (Python Imaging Library)
+from PIL import Image, ImageDraw
+
+# Erstellen eines neuen Bildes im RGB-Modus mit einer Größe von 200x200 Pixeln
+im = Image.new(mode="RGB", size=(200,200))
+
+# Erstellen eines Zeichenobjekts, um auf das Bild zeichnen zu können
+draw = ImageDraw.Draw(im)
+
+# Zeichnen einer Linie auf das Bild
+# Die Linie beginnt bei (100, 200), endet bei (150, 180), hat die Farbe Cyan (hexadezimal 0x00FFFF) und eine Breite von 3 Pixeln
+draw.line((100,200, 150, 180), fill=0x00ffff, width=3)
+
+# Anzeigen des Bildes in einem Bildbetrachter
+im.show()
